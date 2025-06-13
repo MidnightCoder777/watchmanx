@@ -9,7 +9,7 @@ body {
 }
 
 #container {
-    width: 700px;
+    width: 1000px;
     margin: auto;
     padding-top: 40px;
 }
@@ -22,11 +22,17 @@ body {
     letter-spacing: 2px;
 }
 
-.headlines {
+.columns {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.column {
+    width: 30%;
+    text-align: left;
     font-size: 18px;
     line-height: 1.8;
-    text-align: left;
-    margin-top: 20px;
 }
 
 a {
