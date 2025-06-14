@@ -194,19 +194,19 @@ textarea {
     height: 14px;
 }
 body {
-background-color: #FFFFCC;
+background-color: #FFFFFF;
 font-family: Courier New, Courier, monospace;
 font-size: 10pt; font-weight: bold;
 color: #000000
 }
 p {
-background-color: #FFFFCC;
+background-color: #FFFFFF;
 font-family: Courier New, Courier, monospace;
 font-size: 10pt; font-weight: bold;
 color: #000000
 }
 li {
-background-color: #FFFFCC;
+background-color: #FFFFFF;
 font-family: Courier New, Courier, monospace;
 font-size: 10pt; font-weight: bold; color: #000000;
 margin-top: 12 }
@@ -240,7 +240,7 @@ a:active {
 color: #000000
 }
 a:hover {
-color: #FFFFCC;
+color: #FFFFFF;
 background-color: #000000
 }
 .smallprint {
@@ -270,7 +270,7 @@ font-family: Verdana, Helvetica, san-serif
 }
 
 .spon a:hover {
-	background-color: #FFFFCC;
+	background-color: #FFFFFF;
 	color: #000000;
 	text-decoration: underline;
 }
@@ -279,15 +279,15 @@ font-family: Verdana, Helvetica, san-serif
 	border-right: thin solid #CCCCCC;
 }
 .frontcomment {
-	border-bottom: thin solid #FFFFCC;
+	border-bottom: thin solid #FFFFFF;
 	padding: 2px;
 }
 .frontheadline {
-	border-bottom: thin solid #FFFFCC;
+	border-bottom: thin solid #FFFFFF;
 	padding: 2px;
 }
 .frontsection {
-	border-bottom: thin solid #FFFFCC;
+	border-bottom: thin solid #FFFFFF;
 	padding: 2px;
 }
 #newstipheadline {
