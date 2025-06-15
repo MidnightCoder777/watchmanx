@@ -21,12 +21,8 @@ textarea {
 	font-size: 42pt;
 	text-transform: uppercase
 }
-.full_news {
-	display: block;
-}
-.mobile_news {
-	display: none;
-}
+
+
 .ad_column_responsive {
 	display: none;
 }
@@ -47,13 +43,8 @@ textarea {
 	.ad_sidebar {
 		display: none;
 	}	
-	.full_news {
-		display: none;
-	}
-	.mobile_news {
-		display: block;
-		text-align: left;
-	}
+	
+	
     .breakingnews {
 		font-family: Helvetica, Verdana, san-serif;
 		font-size: 150%;
