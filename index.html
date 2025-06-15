@@ -36,6 +36,37 @@
         })();
     </script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<style>
+.news-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    gap: 20px;
+}
+
+.news-wrapper .newscolumn {
+    flex: 1 1 100%;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+/* Two columns for medium screens */
+@media (min-width: 600px) {
+    .news-wrapper .newscolumn {
+        flex: 1 1 48%;
+    }
+}
+
+/* Three columns for wide screens */
+@media (min-width: 900px) {
+    .news-wrapper .newscolumn {
+        flex: 1 1 30%;
+    }
+}
+</style>
 </head>
 
 <body>
@@ -137,6 +168,7 @@
                     </div>
   </div>
 </div>
+
     </div>
 </body>
 
