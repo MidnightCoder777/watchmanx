@@ -27,13 +27,13 @@
             width: 100%;
         }
         .breakingnews {
-            font-family: Helvetica, Verdana, sans-serif;
+            font-family: Times, "Times New Roman", serif;
             font-size: 42pt;
             text-transform: uppercase;
             line-height: 1.2;
         }
         .breakingnews a:visited {
-            font-family: Helvetica, Verdana, sans-serif;
+            font-family: Times, "Times New Roman", serif;
             font-size: 42pt;
             text-transform: uppercase;
         }
@@ -61,68 +61,80 @@
 
         body {
             background-color: #FFFFFF;
-            font-family: Courier New, Courier, monospace;
-            font-size: 10pt; 
-            font-weight: bold;
+            font-family: Times, "Times New Roman", serif;
+            font-size: 14px; 
+            font-weight: normal;
             color: #000000;
             margin: 0;
             padding: 10px;
+            line-height: 1.4;
         }
         p {
             background-color: #FFFFFF;
-            font-family: Courier New, Courier, monospace;
-            font-size: 10pt; 
-            font-weight: bold;
+            font-family: Times, "Times New Roman", serif;
+            font-size: 14px; 
+            font-weight: normal;
             color: #000000;
         }
         li {
             background-color: #FFFFFF;
-            font-family: Courier New, Courier, monospace;
-            font-size: 10pt; 
-            font-weight: bold; 
+            font-family: Times, "Times New Roman", serif;
+            font-size: 14px; 
+            font-weight: normal; 
             color: #000000;
             margin-top: 12px;
         }
         h1 {
-            font-family: Courier New, Courier, monospace;
+            font-family: Times, "Times New Roman", serif;
             font-weight: bold;
             font-size: 36pt;
         }
         h2 {
-            font-family: Courier New, Courier, monospace;
+            font-family: Times, "Times New Roman", serif;
             font-weight: bold;
             font-size: 18pt;
             margin: 10px 0;
+            text-align: center;
         }
         .commentcount {
             font-size: 80%;
             color: #666666;
         }
         .sources {
-            font-family: Courier New, Courier, monospace;
-            font-size: 10pt;
-            font-weight: bold;
+            font-family: Times, "Times New Roman", serif;
+            font-size: 14px;
+            font-weight: normal;
             text-transform: uppercase;
+            margin-top: 15px;
+            padding-top: 10px;
+            border-top: 1px solid #ccc;
         }
         .newslink {
-            font-family: Courier New, Courier, monospace;
-            font-size: 10pt;
-            font-weight: bold;
+            font-family: Times, "Times New Roman", serif;
+            font-size: 14px;
+            font-weight: normal;
             text-transform: none;
         }
+        
+        /* Drudge-style links */
         a:link {
-            color: #000000;
+            color: #0000EE;
+            text-decoration: underline;
         }
         a:visited {
-            color: #000000;
+            color: #551A8B;
+            text-decoration: underline;
         }
         a:active {
-            color: #000000;
+            color: #0000EE;
+            text-decoration: underline;
         }
         a:hover {
-            color: #FFFFFF;
-            background-color: #000000;
+            color: #0000EE;
+            background-color: #FFFFCC;
+            text-decoration: underline;
         }
+        
         .smallprint {
             font-size: 8pt;
             text-transform: uppercase;
@@ -160,9 +172,9 @@
             padding: 2px;
         }
         .frontheadline {
-            border-bottom: thin solid #FFFFFF;
-            padding: 2px;
+            padding: 8px 4px;
             margin-bottom: 8px;
+            line-height: 1.5;
         }
         .frontsection {
             border-bottom: thin solid #FFFFFF;
@@ -247,21 +259,22 @@
             width: 33.33%;
         }
 
-        /* Mobile Responsive Styles */
+        /* Mobile Responsive Styles - Drudge-inspired */
         @media screen and (max-width: 768px) {
             body {
-                padding: 5px;
+                padding: 8px;
+                font-size: 14px;
             }
             
             .breakingnews {
-                font-size: 24px;
+                font-size: 22px;
                 line-height: 1.3;
                 text-align: center;
                 padding: 10px;
             }
             
             .breakingnews a:visited {
-                font-size: 24px;
+                font-size: 22px;
             }
             
             .full_news {
@@ -285,7 +298,7 @@
                 display: block;
                 width: 100%;
                 border-right: none;
-                border-bottom: 2px solid #CCCCCC;
+                border-bottom: 2px solid #000;
                 margin-bottom: 20px;
                 padding-bottom: 15px;
             }
@@ -293,28 +306,43 @@
             .newscolumn {
                 border-right: none;
                 padding-left: 0;
+                margin-bottom: 25px;
             }
             
             h2 {
                 font-size: 16pt;
                 margin: 15px 0 10px 0;
+                text-align: center;
+                border-bottom: 1px solid #000;
+                padding-bottom: 5px;
             }
             
             .frontheadline {
-                padding: 8px 2px;
-                margin-bottom: 12px;
-                font-size: 9pt;
+                padding: 10px 4px;
+                margin-bottom: 6px;
+                font-size: 14px;
+                line-height: 1.5;
+            }
+            
+            .frontheadline a {
+                display: block;
+                padding: 8px 0;
                 line-height: 1.4;
             }
             
             .sources {
-                font-size: 9pt;
-                line-height: 1.5;
+                font-size: 13px;
+                line-height: 1.6;
+                margin-top: 15px;
+                padding-top: 10px;
+                border-top: 1px solid #000;
             }
             
             .sources a {
                 display: inline-block;
-                margin-right: 10px;
+                margin-right: 15px;
+                margin-bottom: 5px;
+                padding: 2px 0;
             }
             
             .commentcount {
@@ -323,6 +351,13 @@
             }
             
             /* Make logo responsive */
+            .logo-container {
+                text-align: center;
+                margin-bottom: 15px;
+                border-bottom: 2px solid #000;
+                padding-bottom: 10px;
+            }
+            
             .logo-container img {
                 max-width: 90%;
                 height: auto;
@@ -331,6 +366,11 @@
 
         /* Very small screens */
         @media screen and (max-width: 480px) {
+            body {
+                padding: 5px;
+                font-size: 13px;
+            }
+            
             .breakingnews {
                 font-size: 18px;
                 padding: 8px;
@@ -345,12 +385,21 @@
             }
             
             .frontheadline {
-                font-size: 8pt;
-                padding: 6px 2px;
+                font-size: 13px;
+                padding: 8px 2px;
+                margin-bottom: 4px;
+            }
+            
+            .frontheadline a {
+                padding: 6px 0;
             }
             
             .sources {
-                font-size: 8pt;
+                font-size: 12px;
+            }
+            
+            .sources a {
+                margin-right: 12px;
             }
         }
 
@@ -417,84 +466,81 @@
         <table border="0" class="main-table full_news">
             <tr valign="top">
                 <td class="newscolumn">
-                    <h2 style="text-align: center;">News</h2>
+                    <h2>NEWS</h2>
                     <div class="newslink">
                         <div class="frontheadline">
-                            <a href="https://harbingersdaily.com/israel-and-iran-in-bible-prophecy-a-new-phase-in-the-middle-east-conflict-and-what-scripture-says-is-coming/">New Phase In The Middle East Conflict And What Scripture Says</a> ...
+                            <a href="https://harbingersdaily.com/israel-and-iran-in-bible-prophecy-a-new-phase-in-the-middle-east-conflict-and-what-scripture-says-is-coming/">New Phase In The Middle East Conflict And What Scripture Says</a>
                         </div>
                         <div class="frontheadline">
-                            <a href="https://www.prophecynewswatch.com/article.cfm?recent_news_id=8399">Israel’s Crushing Blow Leaves Iran With Few Cards Left</a> ...
+                            <a href="https://www.prophecynewswatch.com/article.cfm?recent_news_id=8399">Israel's Crushing Blow Leaves Iran With Few Cards Left</a>
                         </div>
                         <div class="frontheadline">
-                            <a href="https://www.timesofisrael.com/liveblog_entry/iranian-lawmaker-says-closure-of-key-strait-of-hormuz-under-consideration/">Iranian closure of key Strait of Hormuz</a> ...
+                            <a href="https://www.timesofisrael.com/liveblog_entry/iranian-lawmaker-says-closure-of-key-strait-of-hormuz-under-consideration/">Iranian closure of key Strait of Hormuz</a>
                         </div>
                         <div class="frontheadline">
-                            <a href="https://www.prophecynewswatch.com/article.cfm?recent_news_id=8391">What Happens This Saturday Could Change America Forever</a> ...
+                            <a href="https://www.prophecynewswatch.com/article.cfm?recent_news_id=8391">What Happens This Saturday Could Change America Forever</a>
                         </div>
                         <div class="frontheadline">
-                            <a href="https://www.npr.org/2025/06/10/nx-s1-5429168/islam-is-the-fastest-growing-religion-in-the-world-pew-study-says">Islam is the fastest growing religion in the world</a> ...
+                            <a href="https://www.npr.org/2025/06/10/nx-s1-5429168/islam-is-the-fastest-growing-religion-in-the-world-pew-study-says">Islam is the fastest growing religion in the world</a>
                         </div>
                         <div class="frontheadline">
-                            <a href="https://www.nowtheendbegins.com/iran-rains-down-missiles-on-tel-aviv-iron-dome-and-american-thaad-systems-defend-israel/">Missiles And Drones Rain Down On Tel Aviv</a> ...
+                            <a href="https://www.nowtheendbegins.com/iran-rains-down-missiles-on-tel-aviv-iron-dome-and-american-thaad-systems-defend-israel/">Missiles And Drones Rain Down On Tel Aviv</a>
                         </div>
                         <div class="frontheadline">
-                            <a href="https://endtimeheadlines.org/2025/06/cities-brace-for-large-crowds-at-anti-trump-no-kings-demonstrations-across-the-us/">large crowds at 'No Kings' protests across the US</a> ...
+                            <a href="https://endtimeheadlines.org/2025/06/cities-brace-for-large-crowds-at-anti-trump-no-kings-demonstrations-across-the-us/">large crowds at 'No Kings' protests across the US</a>
                         </div>
                     </div>
-                    <p class="sources" align="center"></p>
                     <div class="frontsection">
                         <div class="sources">
-                            <a href="https://www.prophecynewswatch.com" target="_blank">Prophecy News Watch</a><br>
-                            <a href="https://www.npr.org" target="_blank">NPR</a><br>
-                            <a href="https://www.nowtheendbegins.com" target="_blank">Now The End Begins</a><br>
-                            <a href="https://endtimeheadlines.org" target="_blank">End Time Headlines</a>
+                            <a href="https://www.prophecynewswatch.com" target="_blank">PROPHECY NEWS WATCH</a>
+                            <a href="https://www.npr.org" target="_blank">NPR</a>
+                            <a href="https://www.nowtheendbegins.com" target="_blank">NOW THE END BEGINS</a>
+                            <a href="https://endtimeheadlines.org" target="_blank">END TIME HEADLINES</a>
                         </div>
                     </div>
                 </td>
                 <td class="newscolumn">
-                    <h2 style="text-align: center;">Video</h2>
+                    <h2>VIDEO</h2>
                     <div class="newslink">
                         <div class="frontheadline">
-                            <a href="https://www.youtube.com/watch?v=fz1vOkmQn5c">Las Vegas Protest Stream 6/14/25</a> ...
+                            <a href="https://www.youtube.com/watch?v=fz1vOkmQn5c">Las Vegas Protest Stream 6/14/25</a>
                         </div>
                         <div class="frontheadline">
-                            <a href="https://www.youtube.com/watch?v=MkNTiIk5w4o">Israel vs Iran, No Kings Protests, MN Shooting - LIVE</a> ...
+                            <a href="https://www.youtube.com/watch?v=MkNTiIk5w4o">Israel vs Iran, No Kings Protests, MN Shooting - LIVE</a>
                         </div>
                         <div class="frontheadline">
-                            <a href="https://www.youtube.com/watch?v=n5a0dlrXC3I">LIVE NO KINGS - ICE in LA Marines Deployed</a> ...
+                            <a href="https://www.youtube.com/watch?v=n5a0dlrXC3I">LIVE NO KINGS - ICE in LA Marines Deployed</a>
                         </div>
                         <div class="frontheadline">
-                            <a href="https://www.youtube.com/watch?v=_DBDIl7kTtE">BREAKING: Israel Confirms IRGC Leaders Escaped Iran</a> ...
+                            <a href="https://www.youtube.com/watch?v=_DBDIl7kTtE">BREAKING: Israel Confirms IRGC Leaders Escaped Iran</a>
                         </div>
                     </div>
-                    <p class="sources" align="center"></p>
                     <div class="frontsection">
                         <div class="sources">
-                            <a href="https://www.youtube.com/@IRT-Media">IRT Media</a><br>
-                            <a href="https://www.youtube.com/@AgendaFreeTV">Agenda-Free TV</a><br>
-                            <a href="https://www.youtube.com/@Dadsgonelive">Dad's Gone Live</a><br>
-                            <a href="https://www.youtube.com/@TousiTV">Tousi TV</a><br>
+                            <a href="https://www.youtube.com/@IRT-Media">IRT MEDIA</a>
+                            <a href="https://www.youtube.com/@AgendaFreeTV">AGENDA-FREE TV</a>
+                            <a href="https://www.youtube.com/@Dadsgonelive">DAD'S GONE LIVE</a>
+                            <a href="https://www.youtube.com/@TousiTV">TOUSI TV</a>
                         </div>
                     </div>
                 </td>
                 <td class="newscolumn">
-                    <h2 style="text-align: center;">Commentary</h2>
+                    <h2>COMMENTARY</h2>
                     <div class="newslink">
                         <div class="frontheadline">
-                            <a href="https://harbingersdaily.com/the-king-is-coming-whether-or-not-its-popular-in-todays-churches/">The King Is Coming—Whether Or Not It’s ‘Popular’ In Today’s Churches</a> ...
+                            <a href="https://harbingersdaily.com/the-king-is-coming-whether-or-not-its-popular-in-todays-churches/">The King Is Coming—Whether Or Not It's 'Popular' In Today's Churches</a>
                         </div>					
                         <div class="frontheadline">
-                            <a href="https://endtimebibleprophecy.wordpress.com/2025/06/11/the-satanic-battle-is-raging/#more-44447">The Satanic Battle is Raging</a> ...
+                            <a href="https://endtimebibleprophecy.wordpress.com/2025/06/11/the-satanic-battle-is-raging/#more-44447">The Satanic Battle is Raging</a>
                         </div>
                         <div class="frontheadline">
-                            <a href="https://frankdimora.typepad.com/the_last_chronicles/2025/06/httpswwwnbcnewscomvideoiran-s-latest-missile-attack-on-israel-one-dimensional-military-analyst-says-241552453818.html">War between Israel and Iran rages on</a> ...
+                            <a href="https://frankdimora.typepad.com/the_last_chronicles/2025/06/httpswwwnbcnewscomvideoiran-s-latest-missile-attack-on-israel-one-dimensional-military-analyst-says-241552453818.html">War between Israel and Iran rages on</a>
                         </div>
                     </div>
-                    <p class="sources" align="center"></p>
                     <div class="frontsection">
                         <div class="sources">
-                            <a href="https://endtimesresearchministry.com">End Times Research Ministry</a><br>
-                            <a href="https://frankdimora.typepad.com/">BibleProphecyMan.com</a><br>
+                            <a href="https://endtimesresearchministry.com">END TIMES RESEARCH MINISTRY</a>
+                            <a href="https://frankdimora.typepad.com/">BIBLEPROPHECYMAN.COM</a>
                         </div>
                     </div>
                 </td>
@@ -504,8 +550,14 @@
         <!-- Mobile-only stacked layout -->
         <div class="mobile_news">
             <div class="newscolumn">
-                <h2 style="text-align: center;">News</h2>
+                <h2>NEWS</h2>
                 <div class="newslink">
+                    <div class="frontheadline">
+                        <a href="https://harbingersdaily.com/israel-and-iran-in-bible-prophecy-a-new-phase-in-the-middle-east-conflict-and-what-scripture-says-is-coming/">New Phase In The Middle East Conflict And What Scripture Says</a>
+                    </div>
+                    <div class="frontheadline">
+                        <a href="https://www.prophecynewswatch.com/article.cfm?recent_news_id=8399">Israel's Crushing Blow Leaves Iran With Few Cards Left</a>
+                    </div>
                     <div class="frontheadline">
                         <a href="https://www.timesofisrael.com/liveblog_entry/iranian-lawmaker-says-closure-of-key-strait-of-hormuz-under-consideration/">Iranian closure of key Strait of Hormuz</a>
                     </div>
@@ -524,16 +576,16 @@
                 </div>
                 <div class="frontsection">
                     <div class="sources">
-                        <a href="https://www.prophecynewswatch.com" target="_blank">Prophecy News Watch</a>
+                        <a href="https://www.prophecynewswatch.com" target="_blank">PROPHECY NEWS WATCH</a>
                         <a href="https://www.npr.org" target="_blank">NPR</a>
-                        <a href="https://www.nowtheendbegins.com" target="_blank">Now The End Begins</a>
-                        <a href="https://endtimeheadlines.org" target="_blank">End Time Headlines</a>
+                        <a href="https://www.nowtheendbegins.com" target="_blank">NOW THE END BEGINS</a>
+                        <a href="https://endtimeheadlines.org" target="_blank">END TIME HEADLINES</a>
                     </div>
                 </div>
             </div>
 
             <div class="newscolumn">
-                <h2 style="text-align: center;">Video</h2>
+                <h2>VIDEO</h2>
                 <div class="newslink">
                     <div class="frontheadline">
                         <a href="https://www.youtube.com/watch?v=fz1vOkmQn5c">Las Vegas Protest Stream 6/14/25</a>
@@ -550,17 +602,20 @@
                 </div>
                 <div class="frontsection">
                     <div class="sources">
-                        <a href="https://www.youtube.com/@IRT-Media">IRT Media</a>
-                        <a href="https://www.youtube.com/@AgendaFreeTV">Agenda-Free TV</a>
-                        <a href="https://www.youtube.com/@Dadsgonelive">Dad's Gone Live</a>
-                        <a href="https://www.youtube.com/@TousiTV">Tousi TV</a>
+                        <a href="https://www.youtube.com/@IRT-Media">IRT MEDIA</a>
+                        <a href="https://www.youtube.com/@AgendaFreeTV">AGENDA-FREE TV</a>
+                        <a href="https://www.youtube.com/@Dadsgonelive">DAD'S GONE LIVE</a>
+                        <a href="https://www.youtube.com/@TousiTV">TOUSI TV</a>
                     </div>
                 </div>
             </div>
 
             <div class="newscolumn">
-                <h2 style="text-align: center;">Commentary</h2>
+                <h2>COMMENTARY</h2>
                 <div class="newslink">
+                    <div class="frontheadline">
+                        <a href="https://harbingersdaily.com/the-king-is-coming-whether-or-not-its-popular-in-todays-churches/">The King Is Coming—Whether Or Not It's 'Popular' In Today's Churches</a>
+                    </div>
                     <div class="frontheadline">
                         <a href="https://endtimebibleprophecy.wordpress.com/2025/06/11/the-satanic-battle-is-raging/#more-44447">The Satanic Battle is Raging</a>
                     </div>
@@ -570,8 +625,8 @@
                 </div>
                 <div class="frontsection">
                     <div class="sources">
-                        <a href="https://endtimesresearchministry.com">End Times Research Ministry</a>
-                        <a href="https://frankdimora.typepad.com/">BibleProphecyMan.com</a>
+                        <a href="https://endtimesresearchministry.com">END TIMES RESEARCH MINISTRY</a>
+                        <a href="https://frankdimora.typepad.com/">BIBLEPROPHECYMAN.COM</a>
                     </div>
                 </div>
             </div>
