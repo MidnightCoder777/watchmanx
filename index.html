@@ -407,7 +407,14 @@
         ga('create', 'UA-631537-2', 'auto');
         ga('send', 'pageview');
     </script>
+    <script>
+// Add target="_blank" to all external links
+document.querySelectorAll('a[href^="http"]').forEach(link => {
+    link.setAttribute('target', '_blank');
+    link.setAttribute('rel', 'noopener noreferrer');
+});
 
+</script>
     <div class="logo-container" style="text-align: center; padding-top: 0; margin-top: 0; position: relative; top: -20px;">
         <a href="index.html">
             <img src="images/watchmanx-logo.png" alt="WatchmanX News" style="width: 500px; max-width: 100%; height: auto;">
