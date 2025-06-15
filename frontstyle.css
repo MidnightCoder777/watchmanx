@@ -308,3 +308,38 @@ font-family: Verdana, Helvetica, san-serif
 .news_search input[type='text'] {
 	width: 250px;
 }
+
+.news-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.news-wrapper .newscolumn {
+    flex: 1 1 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Two columns on medium screens */
+@media (min-width: 600px) {
+    .news-wrapper .newscolumn {
+        flex: 1 1 48%;
+    }
+}
+
+/* Three columns on larger screens */
+@media (min-width: 900px) {
+    .news-wrapper .newscolumn {
+        flex: 1 1 30%;
+    }
+}
+
+/* Override older mobile-only rules */
+@media screen and (max-width: 500px) {
+    .news-wrapper .newscolumn {
+        flex: 1 1 100%;
+    }
+}
