@@ -5,13 +5,377 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <link rel="canonical" href="https://watchmanx.com/">
     <link rel="amphtml" href="https://watchmanx.com/m/">
-    <link rel="stylesheet" type="text/css" href="/frontstyle.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>WatchmanX News: Prophetic news and breaking events in the final hour</title>
     <meta name="google-site-verification" content="5ZSdG58AvVecEWO2oH3IJy7ptubC9dzRA7mlaB-eKYc">
     <meta itemprop="name" content="WatchmanX News">
     <meta itemprop="description" content="Prophetic news and breaking events in the final hour">
     <meta itemprop="image" content="https://watchmanx.com/">
+    
+    <style>
+        /* Base Styles */
+        div#___plusone_0 {
+            text-align: center !important;
+        }
+        input[type="text"] {
+            width: 100%;
+        }
+        textarea {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            width: 100%;
+        }
+        .breakingnews {
+            font-family: Helvetica, Verdana, sans-serif;
+            font-size: 42pt;
+            text-transform: uppercase;
+            line-height: 1.2;
+        }
+        .breakingnews a:visited {
+            font-family: Helvetica, Verdana, sans-serif;
+            font-size: 42pt;
+            text-transform: uppercase;
+        }
+        .full_news {
+            display: block;
+        }
+        .mobile_news {
+            display: none;
+        }
+        .ad_column_responsive {
+            display: none;
+        }
+        .ad_responsive {
+            display: none;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        .ad_responsive_news {
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        .ad_sidebar {
+            display: none;
+        }
+
+        body {
+            background-color: #FFFFFF;
+            font-family: Courier New, Courier, monospace;
+            font-size: 10pt; 
+            font-weight: bold;
+            color: #000000;
+            margin: 0;
+            padding: 10px;
+        }
+        p {
+            background-color: #FFFFFF;
+            font-family: Courier New, Courier, monospace;
+            font-size: 10pt; 
+            font-weight: bold;
+            color: #000000;
+        }
+        li {
+            background-color: #FFFFFF;
+            font-family: Courier New, Courier, monospace;
+            font-size: 10pt; 
+            font-weight: bold; 
+            color: #000000;
+            margin-top: 12px;
+        }
+        h1 {
+            font-family: Courier New, Courier, monospace;
+            font-weight: bold;
+            font-size: 36pt;
+        }
+        h2 {
+            font-family: Courier New, Courier, monospace;
+            font-weight: bold;
+            font-size: 18pt;
+            margin: 10px 0;
+        }
+        .commentcount {
+            font-size: 80%;
+            color: #666666;
+        }
+        .sources {
+            font-family: Courier New, Courier, monospace;
+            font-size: 10pt;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .newslink {
+            font-family: Courier New, Courier, monospace;
+            font-size: 10pt;
+            font-weight: bold;
+            text-transform: none;
+        }
+        a:link {
+            color: #000000;
+        }
+        a:visited {
+            color: #000000;
+        }
+        a:active {
+            color: #000000;
+        }
+        a:hover {
+            color: #FFFFFF;
+            background-color: #000000;
+        }
+        .smallprint {
+            font-size: 8pt;
+            text-transform: uppercase;
+            font-family: Verdana, Helvetica, sans-serif;
+        }
+        .dateheader {
+            text-align: left;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 60%;
+            text-transform: uppercase;
+            background-color: #CCCC99;
+        }
+        .dateheader a {
+            text-align: left;
+            text-decoration: none;
+            color: #000000;
+        }
+        .dateheader a:hover {
+            text-decoration: underline;
+        }
+        .spon a {
+            text-decoration: none;
+        }
+        .spon a:hover {
+            background-color: #FFFFFF;
+            color: #000000;
+            text-decoration: underline;
+        }
+        .newscolumn {
+            padding-left: 2px;
+            border-right: thin solid #CCCCCC;
+        }
+        .frontcomment {
+            border-bottom: thin solid #FFFFFF;
+            padding: 2px;
+        }
+        .frontheadline {
+            border-bottom: thin solid #FFFFFF;
+            padding: 2px;
+            margin-bottom: 8px;
+        }
+        .frontsection {
+            border-bottom: thin solid #FFFFFF;
+            padding: 2px;
+        }
+        #newstipheadline {
+            width: 90%;
+        }
+        #newstipcomment {
+            width: 90%;
+        }
+        .cse-branding-bottom {
+            text-align: center;
+        }
+        .cse-branding-bottom input[type='text'] {
+            width: 250px;
+        }
+        .email_sub_form input[type='text'] {
+            width: 250px;
+        }
+        .news_search input[type='text'] {
+            width: 250px;
+        }
+        .adlabel {
+            color: #CCCCCC;
+            font-size: 6pt;
+            font-family: Verdana, Helvetica, sans-serif;
+            margin: 0 auto;
+            text-transform: uppercase;
+            text-align: center;
+        }
+        .bottombar {
+            text-align: center;
+            text-transform: uppercase;
+        }
+        .loginbox {
+            text-align: right;
+        }
+        .rsslink {
+            font-family: Verdana, Arial, Helvetica, sans-serif;
+            text-transform: uppercase;
+            text-align: center;
+            font-size: 10px;
+        }
+        .rsslink a {
+            text-decoration: none;
+        }
+        .rsslink a:hover {
+            color: #CC6600;
+        }
+        .rsslink img {
+            vertical-align: -40%;
+        }
+        .rsstop {
+            text-align: right;
+            font-family: Verdana, sans-serif;
+            font-size: 11px;
+            text-transform: uppercase;
+            font-weight: bold;
+            color: #FFFFFF;
+        }
+        .rsstop a {
+            text-decoration: none;
+        }
+        .rsstop a:hover {
+            border-style: solid;
+            background-color: #FF9900;
+            border-color: #CCCCCC #000000 #000000 #CCCCCC;
+            border-width: 1px;
+            color: #FFFFFF;
+            width: 36px;
+            height: 14px;
+        }
+
+        /* Desktop Layout */
+        .main-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .main-table td {
+            vertical-align: top;
+            width: 33.33%;
+        }
+
+        /* Mobile Responsive Styles */
+        @media screen and (max-width: 768px) {
+            body {
+                padding: 5px;
+            }
+            
+            .breakingnews {
+                font-size: 24px;
+                line-height: 1.3;
+                text-align: center;
+                padding: 10px;
+            }
+            
+            .breakingnews a:visited {
+                font-size: 24px;
+            }
+            
+            .full_news {
+                display: none;
+            }
+            
+            .mobile_news {
+                display: block;
+            }
+            
+            /* Stack columns vertically on mobile */
+            .main-table {
+                display: block;
+            }
+            
+            .main-table tr {
+                display: block;
+            }
+            
+            .main-table td {
+                display: block;
+                width: 100%;
+                border-right: none;
+                border-bottom: 2px solid #CCCCCC;
+                margin-bottom: 20px;
+                padding-bottom: 15px;
+            }
+            
+            .newscolumn {
+                border-right: none;
+                padding-left: 0;
+            }
+            
+            h2 {
+                font-size: 16pt;
+                margin: 15px 0 10px 0;
+            }
+            
+            .frontheadline {
+                padding: 8px 2px;
+                margin-bottom: 12px;
+                font-size: 9pt;
+                line-height: 1.4;
+            }
+            
+            .sources {
+                font-size: 9pt;
+                line-height: 1.5;
+            }
+            
+            .sources a {
+                display: inline-block;
+                margin-right: 10px;
+            }
+            
+            .commentcount {
+                font-size: 12px;
+                margin: 10px 0;
+            }
+            
+            /* Make logo responsive */
+            .logo-container img {
+                max-width: 90%;
+                height: auto;
+            }
+        }
+
+        /* Very small screens */
+        @media screen and (max-width: 480px) {
+            .breakingnews {
+                font-size: 18px;
+                padding: 8px;
+            }
+            
+            .breakingnews a:visited {
+                font-size: 18px;
+            }
+            
+            h2 {
+                font-size: 14pt;
+            }
+            
+            .frontheadline {
+                font-size: 8pt;
+                padding: 6px 2px;
+            }
+            
+            .sources {
+                font-size: 8pt;
+            }
+        }
+
+        /* Larger screens - maintain original layout */
+        @media screen and (min-width: 769px) {
+            .ad_responsive {
+                display: block;
+                margin: 0 auto;
+                text-align: center;
+            }
+            
+            .ad_column_responsive {
+                display: block;
+                max-width: 400px;
+                margin: 0 auto;
+            }
+            
+            .ad_sidebar {
+                display: block;
+                max-width: 160px;
+                margin: 0 auto;
+            }
+        }
+    </style>
+
     <script type="text/javascript">
         var googletag = googletag || {};
         googletag.cmd = googletag.cmd || [];
@@ -25,17 +389,6 @@
             node.parentNode.insertBefore(gads, node);
         })();
     </script>
-    <script type="text/javascript">
-        (function() {
-            var po = document.createElement('script');
-            po.type = 'text/javascript';
-            po.async = true;
-            po.src = 'https://apis.google.com/js/plusone.js';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(po, s);
-        })();
-    </script>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -52,40 +405,37 @@
             m.parentNode.insertBefore(a, m)
         })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
         ga('create', 'UA-631537-2', 'auto');
-        ga('send', 'pageview'); < div align = "center" > < p align = "center" > < /p> < span class = "breakingnews" > < a href = "https:/ / talkingpointsmemo.com / where - things - stand / noem - says - national - guard - occupation - is - meant - to - liberate - la - from - its - mayor - and - governor " > Noem: Fed is < br > 'liberating'
-        Los < br > Angeles < /a> < /span > < br / > < span class = "commentcount" > ( < a href = "https://watchmanx.com/news/284632/noem-fed-liberating-los-angeles" > 75 comments < /a>) < /span > < /p> < /div > < p class = "adlabel" > Advertisement < /p> < div class = "ad_responsive" > < p > < script async src = "https:/ / pagead2.googlesyndication.com / pagead / js / adsbygoogle.js ? client = ca - pub - 8378161688790357 "
-                crossorigin = "anonymous" >
-    </script> <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8378161688790357" data-ad-slot="8823017626" data-ad-format="auto" data-full-width-responsive="true"></ins>
-    <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
+        ga('send', 'pageview');
     </script>
-<div style="text-align: center; padding-top: 0; margin-top: 0; position: relative; top: -20px;">
-    <a href="index.html">
-        <img src="images/watchmanx-logo.png" alt="WatchmanX News" style="width: 500px; max-width: 100%; height: auto;">
-    </a>
-</div>
+
+    <div class="logo-container" style="text-align: center; padding-top: 0; margin-top: 0; position: relative; top: -20px;">
+        <a href="index.html">
+            <img src="images/watchmanx-logo.png" alt="WatchmanX News" style="width: 500px; max-width: 100%; height: auto;">
+        </a>
+    </div>
+
     <div align="center">
-        <div style="overflow-x:auto;">
-<table border="0" width="100%" class="full_news">
+        <table border="0" class="main-table full_news">
             <tr valign="top">
-                <td width="33%" class="newscolumn">
-					<h2 style="text-align: center;">News</h2>
+                <td class="newscolumn">
+                    <h2 style="text-align: center;">News</h2>
                     <div class="newslink">
                         <div class="frontheadline">
-                            <a href="https://www.timesofisrael.com/liveblog_entry/iranian-lawmaker-says-closure-of-key-strait-of-hormuz-under-consideration/">Iranian closure of key Strait of Hormuz</a> ...
+                            <a href="https://www.timesofisrael.com/liveblog_entry/iranian-lawmaker-says-closure-of-key-strait-of-hormuz-under-consideration/">Iranian closure of key Strait of Hormuz</a>
                         </div>
                         <div class="frontheadline">
-                            <a href="https://www.prophecynewswatch.com/article.cfm?recent_news_id=8391">What Happens This Saturday Could Change America Forever</a> ...
+                            <a href="https://www.prophecynewswatch.com/article.cfm?recent_news_id=8391">What Happens This Saturday Could Change America Forever</a>
                         </div>
                         <div class="frontheadline">
-                            <a href="https://www.npr.org/2025/06/10/nx-s1-5429168/islam-is-the-fastest-growing-religion-in-the-world-pew-study-says">Islam is the fastest growing religion in the world</a> ...
+                            <a href="https://www.npr.org/2025/06/10/nx-s1-5429168/islam-is-the-fastest-growing-religion-in-the-world-pew-study-says">Islam is the fastest growing religion in the world</a>
                         </div>
                         <div class="frontheadline">
-                            <a href="https://www.nowtheendbegins.com/iran-rains-down-missiles-on-tel-aviv-iron-dome-and-american-thaad-systems-defend-israel/">Missiles And Drones Rain Down On Tel Aviv</a> ...
+                            <a href="https://www.nowtheendbegins.com/iran-rains-down-missiles-on-tel-aviv-iron-dome-and-american-thaad-systems-defend-israel/">Missiles And Drones Rain Down On Tel Aviv</a>
                         </div>
                         <div class="frontheadline">
-                            <a href="https://endtimeheadlines.org/2025/06/cities-brace-for-large-crowds-at-anti-trump-no-kings-demonstrations-across-the-us/">large crowds at 'No Kings' protests across the US</a> ...
+                            <a href="https://endtimeheadlines.org/2025/06/cities-brace-for-large-crowds-at-anti-trump-no-kings-demonstrations-across-the-us/">large crowds at 'No Kings' protests across the US</a>
                         </div>
+                    </div>
                     <p class="sources" align="center"></p>
                     <div class="frontsection">
                         <div class="sources">
@@ -96,21 +446,21 @@
                         </div>
                     </div>
                 </td>
-                <td width="33%" class="newscolumn">
-					<h2 style="text-align: center;">Video</h2>
+                <td class="newscolumn">
+                    <h2 style="text-align: center;">Video</h2>
                     <div class="newslink">
                         <div class="frontheadline">
-                            <a href="https://www.youtube.com/watch?v=fz1vOkmQn5c">Las Vegas Protest Stream 6/14/25</a> ...
+                            <a href="https://www.youtube.com/watch?v=fz1vOkmQn5c">Las Vegas Protest Stream 6/14/25</a>
                         </div>
                         <div class="frontheadline">
-                            <a href="https://www.youtube.com/watch?v=MkNTiIk5w4o">Israel vs Iran, No Kings Protests, MN Shooting - LIVE</a> ...
+                            <a href="https://www.youtube.com/watch?v=MkNTiIk5w4o">Israel vs Iran, No Kings Protests, MN Shooting - LIVE</a>
                         </div>
                         <div class="frontheadline">
-                            <a href="https://www.youtube.com/watch?v=n5a0dlrXC3I">LIVE NO KINGS - ICE in LA Marines Deployed</a> ...
+                            <a href="https://www.youtube.com/watch?v=n5a0dlrXC3I">LIVE NO KINGS - ICE in LA Marines Deployed</a>
                         </div>
                         <div class="frontheadline">
-                            <a href="https://www.youtube.com/watch?v=_DBDIl7kTtE">BREAKING: Israel Confirms IRGC Leaders Escaped Iran</a> ...
-                        </div>							
+                            <a href="https://www.youtube.com/watch?v=_DBDIl7kTtE">BREAKING: Israel Confirms IRGC Leaders Escaped Iran</a>
+                        </div>
                     </div>
                     <p class="sources" align="center"></p>
                     <div class="frontsection">
@@ -122,14 +472,16 @@
                         </div>
                     </div>
                 </td>
-                <td width="33%" class="newscolumn">
-					<h2 style="text-align: center;">Commentary</h2>
+                <td class="newscolumn">
+                    <h2 style="text-align: center;">Commentary</h2>
                     <div class="newslink">
                         <div class="frontheadline">
-                            <a href="https://endtimebibleprophecy.wordpress.com/2025/06/11/the-satanic-battle-is-raging/#more-44447">The Satanic Battle is Raging</a> ...
+                            <a href="https://endtimebibleprophecy.wordpress.com/2025/06/11/the-satanic-battle-is-raging/#more-44447">The Satanic Battle is Raging</a>
                         </div>
                         <div class="frontheadline">
-                            <a href="https://frankdimora.typepad.com/the_last_chronicles/2025/06/httpswwwnbcnewscomvideoiran-s-latest-missile-attack-on-israel-one-dimensional-military-analyst-says-241552453818.html">War between Israel and Iran rages on</a> ...
+                            <a href="https://frankdimora.typepad.com/the_last_chronicles/2025/06/httpswwwnbcnewscomvideoiran-s-latest-missile-attack-on-israel-one-dimensional-military-analyst-says-241552453818.html">War between Israel and Iran rages on</a>
+                        </div>
+                    </div>
                     <p class="sources" align="center"></p>
                     <div class="frontsection">
                         <div class="sources">
@@ -138,33 +490,104 @@
                         </div>
                     </div>
                 </td>
-                        </div>
-                    </div>
-                    <span>
-                        <script type="text/javascript">
-                            var _qevents = _qevents || [];
-                            (function() {
-                                var elem = document.createElement('script');
-                                elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
-                                elem.async = true;
-                                elem.type = "text/javascript";
-                                var scpt = document.getElementsByTagName('script')[0];
-                                scpt.parentNode.insertBefore(elem, scpt);
-                            })();
-                            _qevents.push({
-                                qacct: "p-wjyLwX_bEPD_-"
-                            });
-                        </script> <noscript>
-                            <div style="display:none;">
-                                <span><span><img src="//pixel.quantserve.com/pixel/p-wjyLwX_bEPD_-.gif" border="0" height="1" width="1" alt="Quantcast"></span></span>
-                            </div>
-                        </noscript>
-                    </span>
-                </td>
             </tr>
         </table>
-</div>
-    </div>
-</body>
 
+        <!-- Mobile-only stacked layout -->
+        <div class="mobile_news">
+            <div class="newscolumn">
+                <h2 style="text-align: center;">News</h2>
+                <div class="newslink">
+                    <div class="frontheadline">
+                        <a href="https://www.timesofisrael.com/liveblog_entry/iranian-lawmaker-says-closure-of-key-strait-of-hormuz-under-consideration/">Iranian closure of key Strait of Hormuz</a>
+                    </div>
+                    <div class="frontheadline">
+                        <a href="https://www.prophecynewswatch.com/article.cfm?recent_news_id=8391">What Happens This Saturday Could Change America Forever</a>
+                    </div>
+                    <div class="frontheadline">
+                        <a href="https://www.npr.org/2025/06/10/nx-s1-5429168/islam-is-the-fastest-growing-religion-in-the-world-pew-study-says">Islam is the fastest growing religion in the world</a>
+                    </div>
+                    <div class="frontheadline">
+                        <a href="https://www.nowtheendbegins.com/iran-rains-down-missiles-on-tel-aviv-iron-dome-and-american-thaad-systems-defend-israel/">Missiles And Drones Rain Down On Tel Aviv</a>
+                    </div>
+                    <div class="frontheadline">
+                        <a href="https://endtimeheadlines.org/2025/06/cities-brace-for-large-crowds-at-anti-trump-no-kings-demonstrations-across-the-us/">large crowds at 'No Kings' protests across the US</a>
+                    </div>
+                </div>
+                <div class="frontsection">
+                    <div class="sources">
+                        <a href="https://www.prophecynewswatch.com" target="_blank">Prophecy News Watch</a>
+                        <a href="https://www.npr.org" target="_blank">NPR</a>
+                        <a href="https://www.nowtheendbegins.com" target="_blank">Now The End Begins</a>
+                        <a href="https://endtimeheadlines.org" target="_blank">End Time Headlines</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="newscolumn">
+                <h2 style="text-align: center;">Video</h2>
+                <div class="newslink">
+                    <div class="frontheadline">
+                        <a href="https://www.youtube.com/watch?v=fz1vOkmQn5c">Las Vegas Protest Stream 6/14/25</a>
+                    </div>
+                    <div class="frontheadline">
+                        <a href="https://www.youtube.com/watch?v=MkNTiIk5w4o">Israel vs Iran, No Kings Protests, MN Shooting - LIVE</a>
+                    </div>
+                    <div class="frontheadline">
+                        <a href="https://www.youtube.com/watch?v=n5a0dlrXC3I">LIVE NO KINGS - ICE in LA Marines Deployed</a>
+                    </div>
+                    <div class="frontheadline">
+                        <a href="https://www.youtube.com/watch?v=_DBDIl7kTtE">BREAKING: Israel Confirms IRGC Leaders Escaped Iran</a>
+                    </div>
+                </div>
+                <div class="frontsection">
+                    <div class="sources">
+                        <a href="https://www.youtube.com/@IRT-Media">IRT Media</a>
+                        <a href="https://www.youtube.com/@AgendaFreeTV">Agenda-Free TV</a>
+                        <a href="https://www.youtube.com/@Dadsgonelive">Dad's Gone Live</a>
+                        <a href="https://www.youtube.com/@TousiTV">Tousi TV</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="newscolumn">
+                <h2 style="text-align: center;">Commentary</h2>
+                <div class="newslink">
+                    <div class="frontheadline">
+                        <a href="https://endtimebibleprophecy.wordpress.com/2025/06/11/the-satanic-battle-is-raging/#more-44447">The Satanic Battle is Raging</a>
+                    </div>
+                    <div class="frontheadline">
+                        <a href="https://frankdimora.typepad.com/the_last_chronicles/2025/06/httpswwwnbcnewscomvideoiran-s-latest-missile-attack-on-israel-one-dimensional-military-analyst-says-241552453818.html">War between Israel and Iran rages on</a>
+                    </div>
+                </div>
+                <div class="frontsection">
+                    <div class="sources">
+                        <a href="https://endtimesresearchministry.com">End Times Research Ministry</a>
+                        <a href="https://frankdimora.typepad.com/">BibleProphecyMan.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        var _qevents = _qevents || [];
+        (function() {
+            var elem = document.createElement('script');
+            elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+            elem.async = true;
+            elem.type = "text/javascript";
+            var scpt = document.getElementsByTagName('script')[0];
+            scpt.parentNode.insertBefore(elem, scpt);
+        })();
+        _qevents.push({
+            qacct: "p-wjyLwX_bEPD_-"
+        });
+    </script>
+    <noscript>
+        <div style="display:none;">
+            <img src="//pixel.quantserve.com/pixel/p-wjyLwX_bEPD_-.gif" border="0" height="1" width="1" alt="Quantcast">
+        </div>
+    </noscript>
+</body>
 </html>
