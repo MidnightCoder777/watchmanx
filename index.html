@@ -144,129 +144,161 @@
       margin-bottom: 5px;
     }
     
-/* Mobile responsive design */
+I apologize for the inconvenience. Since the styles aren’t applying on your iPhone and the links are too close together on desktop, let’s address both issues. The problem on your phone likely persists because the new classes might not be triggering correctly due to specificity or layout conflicts, and the desktop issue arises from the removal of <br> tags, which provided spacing. Here’s how we’ll fix this:
+Issues Identified
+
+    Mobile (iPhone) Not Applying Styles:
+        The media queries are active (e.g., max-width: 768px covers iPhone screens like 390px), but the new classes might be overridden by existing styles or not properly targeted.
+        The .column padding and grid layout might be affecting the display.
+    Desktop Links Too Close:
+        Removing <br> tags eliminated vertical spacing, causing links to stack tightly. Desktop needs a different approach to maintain spacing.
+
+Updated Approach
+
+    Add Specificity to Mobile Styles: Use more specific selectors or !important where needed to ensure the new styles override existing ones on mobile.
+    Restore Desktop Spacing: Reintroduce spacing for desktop using CSS, avoiding inline <br> tags.
+    Test Breakpoints: Ensure the layout adapts correctly across devices.
+
+Updated <head> CSS
+
+Modify the /* Mobile responsive design */ section to increase specificity and ensure mobile styles apply:
+html
+<style>
+    /* ... (your existing styles remain unchanged until Mobile responsive design) ... */
+
+    /* Mobile responsive design */
     @media screen and (max-width: 768px) {
-      .container {
-        padding: 5px;
-      }
-      
-      .top-ads {
-        height: auto;
-        flex-direction: column;
-        align-items: center;
-      }
-      
-      .top-ads .ad-space {
-        width: 100%;
-        height: 100px;
-        margin-bottom: 10px;
-      }
-      
-      .main-headline {
-        font-size: 3.2em;
-      }
-      
-      .three-columns {
-        grid-template-columns: 1fr;
-        gap: 10px;
-      }
-      
-      .column {
-        padding: 0 5px;
-        border: none !important;
-      }
-      
-      .sidebar-left,
-      .sidebar-right {
-        border: none;
-        padding: 0 5px;
-      }
-      
-      .search-form input[type="text"],
-      .tips-form textarea {
-        max-width: 100%;
-      }
-      
-      /* New Drudge Report-like styles */
-      .headline-large {
-        font-family: "Courier New", Courier, monospace;
-        font-size: 36px;
-        font-weight: bold;
-        line-height: 1.2;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        margin: 10px 0;
-      }
-      .headline-medium {
-        font-family: "Courier New", Courier, monospace;
-        font-size: 24px;
-        font-weight: bold;
-        line-height: 1.2;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        margin: 5px 0;
-      }
-      .underline {
-        border-bottom: 2px solid black;
-        display: inline-block;
-        padding-bottom: 2px;
-      }
-      .section-title {
-        font-family: "Courier New", Courier, monospace;
-        font-size: 18px;
-        font-weight: bold;
-        text-transform: uppercase;
-        margin: 15px 0 5px;
-      }
-      .news-item {
-        font-family: "Courier New", Courier, monospace;
-        font-size: 16px;
-        margin: 5px 0;
-      }
+        .container {
+            padding: 5px;
+        }
+        
+        .top-ads {
+            height: auto;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .top-ads .ad-space {
+            width: 100%;
+            height: 100px;
+            margin-bottom: 10px;
+        }
+        
+        .main-headline {
+            font-size: 3.2em;
+        }
+        
+        .three-columns {
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
+        
+        .column {
+            padding: 0 5px;
+            border: none !important;
+        }
+        
+        .sidebar-left,
+        .sidebar-right {
+            border: none;
+            padding: 0 5px;
+        }
+        
+        .search-form input[type="text"],
+        .tips-form textarea {
+            max-width: 100%;
+        }
+        
+        /* New Drudge Report-like styles with higher specificity */
+        .column .headline-large {
+            font-family: "Courier New", Courier, monospace !important;
+            font-size: 36px !important;
+            font-weight: bold !important;
+            line-height: 1.2 !important;
+            text-transform: uppercase !important;
+            letter-spacing: 1px !important;
+            margin: 10px 0 !important;
+        }
+        .column .headline-medium {
+            font-family: "Courier New", Courier, monospace !important;
+            font-size: 24px !important;
+            font-weight: bold !important;
+            line-height: 1.2 !important;
+            text-transform: uppercase !important;
+            letter-spacing: 1px !important;
+            margin: 5px 0 !important;
+        }
+        .column .underline {
+            border-bottom: 2px solid black !important;
+            display: inline-block !important;
+            padding-bottom: 2px !important;
+        }
+        .column .section-title {
+            font-family: "Courier New", Courier, monospace !important;
+            font-size: 18px !important;
+            font-weight: bold !important;
+            text-transform: uppercase !important;
+            margin: 15px 0 5px !important;
+        }
+        .column .news-item {
+            font-family: "Courier New", Courier, monospace !important;
+            font-size: 16px !important;
+            margin: 5px 0 !important;
+        }
+        .column .news-item a {
+            text-decoration: none !important; /* Ensure links don’t inherit underline */
+        }
     }
     
     @media screen and (max-width: 480px) {
-      .main-headline {
-        font-size: 2.8em;
-      }
-      
-      .sidebar-left {
-        font-size: 1.2em;
-      }
-      
-      .sidebar-left a {
-        font-size: 1.1em;
-        line-height: 1.2;
-      } /* Fixed missing closing brace here */
-      
-      .container {
-        padding: 2px;
-      }
-      
-      .column {
-        padding: 0 2px;
-        font-size: 1.1em;
-      }
-      
-      .column a {
-        font-size: 1.0em;
-      }
-      
-      /* Adjust new styles for smaller screens */
-      .headline-large {
-        font-size: 28px;
-      }
-      .headline-medium {
-        font-size: 20px;
-      }
-      .section-title {
-        font-size: 16px;
-      }
-      .news-item {
-        font-size: 14px;
-      }
+        .main-headline {
+            font-size: 2.8em;
+        }
+        
+        .sidebar-left {
+            font-size: 1.2em;
+        }
+        
+        .sidebar-left a {
+            font-size: 1.1em;
+            line-height: 1.2;
+        }
+        
+        .container {
+            padding: 2px;
+        }
+        
+        .column {
+            padding: 0 2px;
+            font-size: 1.1em;
+        }
+        
+        .column a {
+            font-size: 1.0em;
+        }
+        
+        /* Adjust new styles for smaller screens */
+        .column .headline-large {
+            font-size: 28px !important;
+        }
+        .column .headline-medium {
+            font-size: 20px !important;
+        }
+        .column .section-title {
+            font-size: 16px !important;
+        }
+        .column .news-item {
+            font-size: 14px !important;
+        }
     }
-  </style>
+
+    /* Desktop spacing for links */
+    @media screen and (min-width: 769px) {
+        .column .news-item {
+            margin: 10px 0 !important; /* Add spacing between links on desktop */
+        }
+    }
+</style>
 </head>
 
 <body>
