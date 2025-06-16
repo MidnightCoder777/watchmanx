@@ -144,7 +144,7 @@
       margin-bottom: 5px;
     }
     
-    /* Mobile responsive design */
+/* Mobile responsive design */
     @media screen and (max-width: 768px) {
       .container {
         padding: 5px;
@@ -186,6 +186,43 @@
       .tips-form textarea {
         max-width: 100%;
       }
+      
+      /* New Drudge Report-like styles */
+      .headline-large {
+        font-family: "Courier New", Courier, monospace;
+        font-size: 36px;
+        font-weight: bold;
+        line-height: 1.2;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin: 10px 0;
+      }
+      .headline-medium {
+        font-family: "Courier New", Courier, monospace;
+        font-size: 24px;
+        font-weight: bold;
+        line-height: 1.2;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin: 5px 0;
+      }
+      .underline {
+        border-bottom: 2px solid black;
+        display: inline-block;
+        padding-bottom: 2px;
+      }
+      .section-title {
+        font-family: "Courier New", Courier, monospace;
+        font-size: 18px;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin: 15px 0 5px;
+      }
+      .news-item {
+        font-family: "Courier New", Courier, monospace;
+        font-size: 16px;
+        margin: 5px 0;
+      }
     }
     
     @media screen and (max-width: 480px) {
@@ -200,6 +237,7 @@
       .sidebar-left a {
         font-size: 1.1em;
         line-height: 1.2;
+      } /* Fixed missing closing brace here */
       
       .container {
         padding: 2px;
@@ -212,6 +250,20 @@
       
       .column a {
         font-size: 1.0em;
+      }
+      
+      /* Adjust new styles for smaller screens */
+      .headline-large {
+        font-size: 28px;
+      }
+      .headline-medium {
+        font-size: 20px;
+      }
+      .section-title {
+        font-size: 16px;
+      }
+      .news-item {
+        font-size: 14px;
       }
     }
   </style>
