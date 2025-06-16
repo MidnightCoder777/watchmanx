@@ -144,29 +144,7 @@
       margin-bottom: 5px;
     }
     
-I apologize for the inconvenience. Since the styles aren’t applying on your iPhone and the links are too close together on desktop, let’s address both issues. The problem on your phone likely persists because the new classes might not be triggering correctly due to specificity or layout conflicts, and the desktop issue arises from the removal of <br> tags, which provided spacing. Here’s how we’ll fix this:
-Issues Identified
-
-    Mobile (iPhone) Not Applying Styles:
-        The media queries are active (e.g., max-width: 768px covers iPhone screens like 390px), but the new classes might be overridden by existing styles or not properly targeted.
-        The .column padding and grid layout might be affecting the display.
-    Desktop Links Too Close:
-        Removing <br> tags eliminated vertical spacing, causing links to stack tightly. Desktop needs a different approach to maintain spacing.
-
-Updated Approach
-
-    Add Specificity to Mobile Styles: Use more specific selectors or !important where needed to ensure the new styles override existing ones on mobile.
-    Restore Desktop Spacing: Reintroduce spacing for desktop using CSS, avoiding inline <br> tags.
-    Test Breakpoints: Ensure the layout adapts correctly across devices.
-
-Updated <head> CSS
-
-Modify the /* Mobile responsive design */ section to increase specificity and ensure mobile styles apply:
-html
-<style>
-    /* ... (your existing styles remain unchanged until Mobile responsive design) ... */
-
-    /* Mobile responsive design */
+/* Mobile responsive design */
     @media screen and (max-width: 768px) {
         .container {
             padding: 5px;
@@ -189,19 +167,21 @@ html
         }
         
         .three-columns {
-            grid-template-columns: 1fr;
-            gap: 10px;
+            grid-template-columns: 1fr !important; /* Force single column */
+            gap: 20px !important; /* Increase gap for better separation */
+            width: 100% !important; /* Ensure full width */
         }
         
         .column {
-            padding: 0 5px;
+            padding: 0 5px !important;
             border: none !important;
+            width: 100% !important; /* Full width per column */
         }
         
         .sidebar-left,
         .sidebar-right {
-            border: none;
-            padding: 0 5px;
+            border: none !important;
+            padding: 0 5px !important;
         }
         
         .search-form input[type="text"],
@@ -209,24 +189,24 @@ html
             max-width: 100%;
         }
         
-        /* New Drudge Report-like styles with higher specificity */
+        /* Enhanced Drudge Report-like styles */
         .column .headline-large {
             font-family: "Courier New", Courier, monospace !important;
-            font-size: 36px !important;
+            font-size: 40px !important; /* Increased for better visibility */
             font-weight: bold !important;
             line-height: 1.2 !important;
             text-transform: uppercase !important;
             letter-spacing: 1px !important;
-            margin: 10px 0 !important;
+            margin: 15px 0 !important; /* Increased margin */
         }
         .column .headline-medium {
             font-family: "Courier New", Courier, monospace !important;
-            font-size: 24px !important;
+            font-size: 28px !important; /* Increased for better visibility */
             font-weight: bold !important;
             line-height: 1.2 !important;
             text-transform: uppercase !important;
             letter-spacing: 1px !important;
-            margin: 5px 0 !important;
+            margin: 10px 0 !important; /* Increased margin */
         }
         .column .underline {
             border-bottom: 2px solid black !important;
@@ -235,15 +215,15 @@ html
         }
         .column .section-title {
             font-family: "Courier New", Courier, monospace !important;
-            font-size: 18px !important;
+            font-size: 22px !important; /* Increased for better visibility */
             font-weight: bold !important;
             text-transform: uppercase !important;
-            margin: 15px 0 5px !important;
+            margin: 20px 0 10px !important; /* Increased margin */
         }
         .column .news-item {
             font-family: "Courier New", Courier, monospace !important;
-            font-size: 16px !important;
-            margin: 5px 0 !important;
+            font-size: 18px !important; /* Increased for better visibility */
+            margin: 10px 0 !important; /* Increased margin */
         }
         .column .news-item a {
             text-decoration: none !important; /* Ensure links don’t inherit underline */
@@ -269,7 +249,7 @@ html
         }
         
         .column {
-            padding: 0 2px;
+            padding: 0 2px !important;
             font-size: 1.1em;
         }
         
@@ -279,28 +259,27 @@ html
         
         /* Adjust new styles for smaller screens */
         .column .headline-large {
-            font-size: 28px !important;
+            font-size: 32px !important; /* Adjusted for smaller screens */
         }
         .column .headline-medium {
-            font-size: 20px !important;
+            font-size: 24px !important; /* Adjusted for smaller screens */
         }
         .column .section-title {
-            font-size: 16px !important;
+            font-size: 18px !important; /* Adjusted for smaller screens */
         }
         .column .news-item {
-            font-size: 14px !important;
+            font-size: 16px !important; /* Adjusted for smaller screens */
         }
     }
 
     /* Desktop spacing for links */
     @media screen and (min-width: 769px) {
         .column .news-item {
-            margin: 10px 0 !important; /* Add spacing between links on desktop */
+            margin: 10px 0 !important; /* Maintain spacing on desktop */
         }
     }
 </style>
 </head>
-
 <body>
     <!-- Logo -->
     <div style="text-align: center; padding-top: 0; margin-top: 0; position: relative; top: -20px;">
@@ -335,7 +314,7 @@ html
 
         <!-- Center Column -->
         <div class="column">
-            <img src="https://pbs.twimg.com/media/Gtc7Y5cbYAESPF0?format=jpg&name=4096x4096" width="200"><br><br>
+            <img src="https://pbs.twimg.com/media/Gtc7Y5cbYAESPF0?format=jpg&name=4096x4096" width="200"><br>
             <div class="section-title">Minnesota killings spread fear in country riven by violence against politicians...</div>
             <div class="news-item"><a href="https://www.msn.com/en-us/politics/government/minnesota-killings-spread-fear-in-country-riven-by-violence-against-politicians/ar-AA1GKduI">Minnesota killings spread fear in country riven by violence against politicians...</a></div>
             <div class="news-item"><a href="https://www.mprnews.org/story/2025/06/14/melissa-hortman-killed-minnesota-dlf-leader-remembered">Murdered Dem remembered as 'shining light,' consensus builder...</a></div>
@@ -357,7 +336,7 @@ html
 
         <!-- Right Column -->
         <div class="column">
-            <img src="https://pbs.twimg.com/media/GtVGJe6W4AA-Xgj?format=jpg&name=small" width="200"><br><br>
+            <img src="https://pbs.twimg.com/media/GtVGJe6W4AA-Xgj?format=jpg&name=small" width="200"><br>
             <div class="section-title">NO KINGS: Clintons, Kamala at Hamptons Wedding of Liberal Royalty...</div>
             <div class="news-item"><a href="https://www.nytimes.com/2025/06/14/us/politics/huma-abedin-alex-soros-wedding-hillary-clinton-kamala-harris.html">NO KINGS: Clintons, Kamala at Hamptons Wedding of Liberal Royalty...</a></div>
             <hr>
@@ -393,4 +372,3 @@ html
         </div>
     </div>
 </body>
-Changes Made
