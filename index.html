@@ -144,153 +144,164 @@
       margin-bottom: 5px;
     }
     
-I’m glad we’ve got the single vertical layout working on mobile! Since the font sizes are now too large, similar to the Drudge Report’s bold style, let’s adjust them to be more readable while maintaining the Drudge-inspired aesthetic. The current sizes (e.g., 40px for .headline-large, 28px for .headline-medium) might be overwhelming on smaller screens like an iPhone. We’ll scale them down to a more balanced size, keeping the bold, uppercase, monospaced look.
-Issues Identified
-
-    Font sizes are too big on mobile, likely causing text to overflow or feel cramped.
-    We want a Drudge Report-like feel but with improved readability on small screens.
-
-Updated <head> CSS
-
-Let’s reduce the font sizes in the /* Mobile responsive design */ section and fine-tune them for mobile devices:
-html
-<style>
-    /* ... (your existing styles remain unchanged until Mobile responsive design) ... */
-
-    /* Mobile responsive design */
-    @media screen and (max-width: 768px) {
-        .container {
-            padding: 5px;
-        }
-        
-        .top-ads {
-            height: auto;
-            flex-direction: column;
-            align-items: center;
-        }
-        
-        .top-ads .ad-space {
-            width: 100%;
-            height: 100px;
-            margin-bottom: 10px;
-        }
-        
-        .main-headline {
-            font-size: 3.2em;
-        }
-        
-        .three-columns {
-            grid-template-columns: 1fr !important;
-            gap: 20px !important;
-            width: 100% !important;
-        }
-        
-        .column {
-            padding: 0 5px !important;
-            border: none !important;
-            width: 100% !important;
-        }
-        
-        .sidebar-left,
-        .sidebar-right {
-            border: none !important;
-            padding: 0 5px !important;
-        }
-        
-        .search-form input[type="text"],
-        .tips-form textarea {
-            max-width: 100%;
-        }
-        
-        /* Adjusted Drudge Report-like styles */
-        .column .headline-large {
-            font-family: "Courier New", Courier, monospace !important;
-            font-size: 28px !important; /* Reduced from 40px */
-            font-weight: bold !important;
-            line-height: 1.2 !important;
-            text-transform: uppercase !important;
-            letter-spacing: 1px !important;
-            margin: 10px 0 !important;
-        }
-        .column .headline-medium {
-            font-family: "Courier New", Courier, monospace !important;
-            font-size: 20px !important; /* Reduced from 28px */
-            font-weight: bold !important;
-            line-height: 1.2 !important;
-            text-transform: uppercase !important;
-            letter-spacing: 1px !important;
-            margin: 8px 0 !important;
-        }
-        .column .underline {
-            border-bottom: 2px solid black !important;
-            display: inline-block !important;
-            padding-bottom: 2px !important;
-        }
-        .column .section-title {
-            font-family: "Courier New", Courier, monospace !important;
-            font-size: 16px !important; /* Reduced from 22px */
-            font-weight: bold !important;
-            text-transform: uppercase !important;
-            margin: 15px 0 5px !important;
-        }
-        .column .news-item {
-            font-family: "Courier New", Courier, monospace !important;
-            font-size: 14px !important; /* Reduced from 18px */
-            margin: 8px 0 !important;
-        }
-        .column .news-item a {
-            text-decoration: none !important;
-        }
-    }
-    
-    @media screen and (max-width: 480px) {
-        .main-headline {
-            font-size: 2.8em;
-        }
-        
-        .sidebar-left {
-            font-size: 1.2em;
-        }
-        
-        .sidebar-left a {
-            font-size: 1.1em;
-            line-height: 1.2;
-        }
-        
-        .container {
-            padding: 2px;
-        }
-        
-        .column {
-            padding: 0 2px !important;
-            font-size: 1.1em;
-        }
-        
-        .column a {
-            font-size: 1.0em;
-        }
-        
-        /* Further adjust for smaller screens */
-        .column .headline-large {
-            font-size: 24px !important; /* Reduced from 32px */
-        }
-        .column .headline-medium {
-            font-size: 18px !important; /* Reduced from 24px */
-        }
-        .column .section-title {
-            font-size: 14px !important; /* Reduced from 18px */
-        }
-        .column .news-item {
-            font-size: 12px !important; /* Reduced from 16px */
-        }
+/* Mobile responsive design */
+@media screen and (max-width: 768px) {
+    html, body {
+        font-size: 2.2em !important; /* Large base font for everything */
+        padding: 0 !important;
+        margin: 0 !important;
+        font-family: "Courier New", Courier, monospace !important;
+        background: #fff !important;
     }
 
-    /* Desktop spacing for links */
-    @media screen and (min-width: 769px) {
-        .column .news-item {
-            margin: 10px 0 !important;
-        }
+    .container {
+        max-width: 100% !important;
+        padding: 0 5px !important;
+        margin: 0 auto !important;
+        box-sizing: border-box !important;
     }
+
+    .top-ads {
+        height: auto !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        width: 100% !important;
+        margin-bottom: 10px !important;
+    }
+
+    .top-ads .ad-space {
+        width: 100% !important;
+        height: 100px !important;
+        margin-bottom: 10px !important;
+    }
+
+    .main-headline {
+        font-size: 2.5em !important;
+        font-weight: bold !important;
+        text-transform: uppercase !important;
+        letter-spacing: 1px !important;
+        margin: 15px 0 !important;
+        text-align: center !important;
+    }
+
+    .three-columns {
+        display: block !important;
+        grid-template-columns: 1fr !important;
+        gap: 0 !important;
+        width: 100% !important;
+        margin: 0 !important;
+    }
+
+    .column, .sidebar-left, .sidebar-right {
+        display: block !important;
+        width: 100% !important;
+        padding: 0 5px !important;
+        border: none !important;
+        margin: 0 !important;
+        box-sizing: border-box !important;
+    }
+
+    .sidebar-left,
+    .sidebar-right {
+        font-size: 1.1em !important;
+    }
+
+    .search-form input[type="text"],
+    .tips-form textarea {
+        max-width: 100% !important;
+        font-size: 1em !important;
+    }
+
+    /* Drudge Report-like headline styles */
+    .headline-large {
+        font-size: 2em !important;
+        font-weight: bold !important;
+        text-transform: uppercase !important;
+        margin: 18px 0 !important;
+        line-height: 1.1 !important;
+    }
+
+    .headline-medium {
+        font-size: 1.4em !important;
+        font-weight: bold !important;
+        text-transform: uppercase !important;
+        margin: 12px 0 !important;
+        line-height: 1.1 !important;
+    }
+
+    .section-title {
+        font-size: 1.1em !important;
+        font-weight: bold !important;
+        text-transform: uppercase !important;
+        margin: 16px 0 8px !important;
+    }
+
+    .news-item {
+        font-size: 1em !important;
+        margin: 10px 0 !important;
+    }
+
+    .news-item a {
+        font-size: 1em !important;
+        text-decoration: none !important;
+        color: #000 !important;
+        line-height: 1.2 !important;
+    }
+
+    .underline {
+        border-bottom: 2px solid #000 !important;
+        display: inline-block !important;
+        padding-bottom: 2px !important;
+    }
+}
+
+/* Ultra-narrow screens (iPhone SE, etc.) */
+@media screen and (max-width: 480px) {
+    html, body {
+        font-size: 1.6em !important;
+    }
+
+    .main-headline {
+        font-size: 2em !important;
+    }
+
+    .sidebar-left,
+    .sidebar-right {
+        font-size: 1em !important;
+    }
+
+    .container {
+        padding: 0 2px !important;
+    }
+
+    .column, .sidebar-left, .sidebar-right {
+        padding: 0 2px !important;
+    }
+
+    .headline-large {
+        font-size: 1.3em !important;
+    }
+
+    .headline-medium {
+        font-size: 1.1em !important;
+    }
+
+    .section-title {
+        font-size: 1em !important;
+    }
+
+    .news-item {
+        font-size: 0.95em !important;
+    }
+}
+
+/* Desktop spacing for links */
+@media screen and (min-width: 769px) {
+    .column .news-item {
+        margin: 10px 0 !important;
+    }
+}
+
 </style>
 </head>
 <body>
