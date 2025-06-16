@@ -144,7 +144,20 @@
       margin-bottom: 5px;
     }
     
-/* Mobile responsive design */
+I’m glad we’ve got the single vertical layout working on mobile! Since the font sizes are now too large, similar to the Drudge Report’s bold style, let’s adjust them to be more readable while maintaining the Drudge-inspired aesthetic. The current sizes (e.g., 40px for .headline-large, 28px for .headline-medium) might be overwhelming on smaller screens like an iPhone. We’ll scale them down to a more balanced size, keeping the bold, uppercase, monospaced look.
+Issues Identified
+
+    Font sizes are too big on mobile, likely causing text to overflow or feel cramped.
+    We want a Drudge Report-like feel but with improved readability on small screens.
+
+Updated <head> CSS
+
+Let’s reduce the font sizes in the /* Mobile responsive design */ section and fine-tune them for mobile devices:
+html
+<style>
+    /* ... (your existing styles remain unchanged until Mobile responsive design) ... */
+
+    /* Mobile responsive design */
     @media screen and (max-width: 768px) {
         .container {
             padding: 5px;
@@ -167,15 +180,15 @@
         }
         
         .three-columns {
-            grid-template-columns: 1fr !important; /* Force single column */
-            gap: 20px !important; /* Increase gap for better separation */
-            width: 100% !important; /* Ensure full width */
+            grid-template-columns: 1fr !important;
+            gap: 20px !important;
+            width: 100% !important;
         }
         
         .column {
             padding: 0 5px !important;
             border: none !important;
-            width: 100% !important; /* Full width per column */
+            width: 100% !important;
         }
         
         .sidebar-left,
@@ -189,24 +202,24 @@
             max-width: 100%;
         }
         
-        /* Enhanced Drudge Report-like styles */
+        /* Adjusted Drudge Report-like styles */
         .column .headline-large {
             font-family: "Courier New", Courier, monospace !important;
-            font-size: 40px !important; /* Increased for better visibility */
+            font-size: 28px !important; /* Reduced from 40px */
             font-weight: bold !important;
             line-height: 1.2 !important;
             text-transform: uppercase !important;
             letter-spacing: 1px !important;
-            margin: 15px 0 !important; /* Increased margin */
+            margin: 10px 0 !important;
         }
         .column .headline-medium {
             font-family: "Courier New", Courier, monospace !important;
-            font-size: 28px !important; /* Increased for better visibility */
+            font-size: 20px !important; /* Reduced from 28px */
             font-weight: bold !important;
             line-height: 1.2 !important;
             text-transform: uppercase !important;
             letter-spacing: 1px !important;
-            margin: 10px 0 !important; /* Increased margin */
+            margin: 8px 0 !important;
         }
         .column .underline {
             border-bottom: 2px solid black !important;
@@ -215,18 +228,18 @@
         }
         .column .section-title {
             font-family: "Courier New", Courier, monospace !important;
-            font-size: 22px !important; /* Increased for better visibility */
+            font-size: 16px !important; /* Reduced from 22px */
             font-weight: bold !important;
             text-transform: uppercase !important;
-            margin: 20px 0 10px !important; /* Increased margin */
+            margin: 15px 0 5px !important;
         }
         .column .news-item {
             font-family: "Courier New", Courier, monospace !important;
-            font-size: 18px !important; /* Increased for better visibility */
-            margin: 10px 0 !important; /* Increased margin */
+            font-size: 14px !important; /* Reduced from 18px */
+            margin: 8px 0 !important;
         }
         .column .news-item a {
-            text-decoration: none !important; /* Ensure links don’t inherit underline */
+            text-decoration: none !important;
         }
     }
     
@@ -257,25 +270,25 @@
             font-size: 1.0em;
         }
         
-        /* Adjust new styles for smaller screens */
+        /* Further adjust for smaller screens */
         .column .headline-large {
-            font-size: 32px !important; /* Adjusted for smaller screens */
+            font-size: 24px !important; /* Reduced from 32px */
         }
         .column .headline-medium {
-            font-size: 24px !important; /* Adjusted for smaller screens */
+            font-size: 18px !important; /* Reduced from 24px */
         }
         .column .section-title {
-            font-size: 18px !important; /* Adjusted for smaller screens */
+            font-size: 14px !important; /* Reduced from 18px */
         }
         .column .news-item {
-            font-size: 16px !important; /* Adjusted for smaller screens */
+            font-size: 12px !important; /* Reduced from 16px */
         }
     }
 
     /* Desktop spacing for links */
     @media screen and (min-width: 769px) {
         .column .news-item {
-            margin: 10px 0 !important; /* Maintain spacing on desktop */
+            margin: 10px 0 !important;
         }
     }
 </style>
